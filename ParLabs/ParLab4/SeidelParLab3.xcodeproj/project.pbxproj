@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4649DA271CF344B6006C21DF /* libiomp5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiomp5.dylib; path = ../../../../../usr/local/lib/libiomp5.dylib; sourceTree = "<group>"; };
 		4663F6CE1CF042DD00AB59D3 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
 		4663F6D01CF0448600AB59D3 /* clInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = clInfo.cpp; sourceTree = "<group>"; };
 		4663F6D21CF0514A00AB59D3 /* cl_l3.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; path = cl_l3.cl; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		46D56BE71CF0310E0046C5B7 = {
 			isa = PBXGroup;
 			children = (
+				4649DA271CF344B6006C21DF /* libiomp5.dylib */,
 				4663F6CE1CF042DD00AB59D3 /* OpenCL.framework */,
 				46D56BF21CF0310E0046C5B7 /* SeidelParLab3 */,
 				46D56BF11CF0310E0046C5B7 /* Products */,
@@ -221,6 +223,11 @@
 		46D56BF81CF0310E0046C5B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CC = "/usr/local/bin/clang-omp";
+				CLANG_ENABLE_MODULES = NO;
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				OTHER_CFLAGS = "-fopenmp";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-framework",
@@ -233,6 +240,11 @@
 		46D56BF91CF0310E0046C5B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CC = "/usr/local/bin/clang-omp";
+				CLANG_ENABLE_MODULES = NO;
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				OTHER_CFLAGS = "-fopenmp";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-framework",

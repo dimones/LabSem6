@@ -11,7 +11,7 @@
 #include <cmath>
 #include <stdio.h>
 #include <OpenCL/OpenCL.h>
-#define eps 0.000001
+#define eps 0.0000000000001
 #define cclock() clock()/2
 using namespace std;
 
